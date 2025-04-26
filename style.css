@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* the main navigation bar code */
+
+nav {
+    border: 1px solid black;
+    width: 100%;
+    margin-top: 5px;
+}
+.nav-container-main {
+    width: 99%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+.nav-logo {
+    width: 30%;
+    padding-left: 1em;
+}
+.nav-logo img {
+    max-width: 90%;
+    height: auto;
+}
+.nav-bars-cont {
+    width: 60%;
+}
+.nav-bars-cont ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    margin-right: 1.5em;
+}
+.nav-bars-cont li {
+    transition: background-color 0.5s;
+    margin: 0 1em 0 1em;
+    text-wrap: nowrap;
+}
+
+.nav-bars-cont ul li a {
+    text-decoration: none;
+    color: rgb(46, 46, 46);
+}
+.nav-bars-cont ul li a:hover {
+    color: black;
+}
+.nav-bars-cont ul li a button {
+    padding: 0.8em 1em ;
+    background-color: rgb(0, 255, 128);
+    border: 0;
+    font-size: medium;
+}
+
+
+/* the menu buttons */
+.menu-icons {
+    position: absolute;
+    top: 1.5em;
+    right: 2em;
+    z-index: 3;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 1em;
+}
+
+.menu-1 {
+    display: block;
+    cursor: pointer;
+}
+.menu-2 {
+    display: none;
+    z-index: 5;
+}
+/* the side navigation bar code for smaller devices */
+
+.nav-container-sidebar {
+    display: none;
+    background-color: rgb(0, 219, 0);
+    padding: 5em 1em 1em 1em;
+    width: 40%;
+    height: 100vh;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    right: 0%;
+}
+.nav-container-sidebar ul {
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+.nav-container-sidebar ul li {
+    width: 90%;
+    display: block;
+    margin: 5px auto;
+    padding: 5px;
+    background-color: aqua;
+    transition: background-color 0.5s;
+}
+.nav-container-sidebar ul li:hover {
+    background-color: rgb(0, 225, 255);
+}
+.nav-container-sidebar ul li a {
+    text-decoration: none ;
+    color: black;
+    display: block;
+    width: 100%;
+}
+
+
+/* this is the code for the part below the naviagtions bars */
+
+.main-1 {
+    border: 1px solid black;
+    width: 100%;
+    margin: 2em auto 1em auto ;
+    padding: 2em ;
+    background-color: rgb(0, 194, 0);
+    display: flex;
+    flex-direction: row;
+    
+}
+.main-1-Header {
+    width: 65%;
+    padding: 1em 1em 1em 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-header-1-h2 {
+    display: none;
+}
+.main-1-Header p {
+    text-align: justify;
+    margin-top: 1em;
+}
+.main-1-image {
+    width: 35%;
+    display: flex;
+    align-items: center;
+}
+.main-1-image img {
+    width: auto;
+
+    height: 60vh;
+}
+
+@media screen and (max-width: 800px) {
+    .nav-bars-cont {
+        display: none;
+    }
+    .menu-icons {
+        display: block;
+    }
+    .main-1 {
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-1-Header {
+        width: 100%;
+        padding: 1em 1em 1em 2em;
+    }
+    .main-1-image {
+        width: 90%;
+        border: 1px solid white;
+        display: block;
+    }
+    .main-header-1-h1 {
+        display: none;
+    }
+    .main-header-1-h2 {
+        display: block;
+    }
+    .main-1-Header p {
+        text-align: left;
+    }
+    .main-1-image img {
+        display: block;
+        margin: auto;
+    }
+
+}
+@media screen and (min-width: 800px) {
+    .nav-bars-cont {
+        display: block;
+    }
+    .menu-icons {
+        display: none;
+    }
+}
